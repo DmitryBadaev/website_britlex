@@ -3,6 +3,7 @@ body {
 * {
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
+    font-style: normal;
 }
 
 .container {
@@ -29,138 +30,24 @@ h1,h2,h3,h4,h5 {
     margin-block-end: 0;
 
 }
-.button {
-    padding: 32px 117px;
-    background: $main-color;
-    border-radius: 15px;
+.logo {
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
-    color: #FFFFFF;
-    border: none;
-    cursor: pointer;
-    transition: 0.3s all;
-    &:hover{
-        transform: scale(1.05);
-    }
-    &__mini {
-        font-weight: 500;
-        font-size: 20px;
-        padding: 15px 51px;
-        border-radius: 5px;
-    }
-    &__left {
-        text-align: left;
-    }
-    &__form {
-        width: 264px;
-        height: 80px;
-        padding: 25px 85px;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 20px;
-
-    }
-}
-
-.title {
-    text-align: center;
-    font-style: normal;
-    font-weight: 600;
-    font-size: 48px;
     color: $text-color;
+    span {
+        color: $text-desrc;
+    }
 }
 
-@media (max-width: 992px){
-    .button {
-        padding: 22px 79px;
-        background: $main-color;
-        border-radius: 15px;
-        font-style: normal;
+@media (max-width:992px) {
+    .logo {
+        font-size: 30px;
+    }
+
+}
+@media (max-width: 320px) {
+    .logo {
         font-size: 24px;
-        font-weight: 400;
-        color: #FFFFFF;
-        border: none;
-        cursor: pointer;
-        transition: 0.3s all;
-        &:hover{
-            transform: scale(1.05);
-        }
-        &__mini {
-            font-weight: 500;
-            font-size: 20px;
-            padding: 15px 51px;
-            border-radius: 5px;
-        }
-        &__left {
-            text-align: left;
-        }
-        &__form {
-            width: 40%;
-            height: 60px;
-            padding: 21px 56px;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-    
-        }
-    }
-    .title {
-    font-size: 36px;
     }
 }
-
-@media (max-width: 767px){
-    .button {
-        padding: 19px 67px;
-        background: $main-color;
-        font-size: 18px;
-        &__mini {
-            font-weight: 500;
-            font-size: 20px;
-            padding: 15px 51px;
-            border-radius: 5px;
-        }
-        &__left {
-            text-align: left;
-        }
-        &__form {
-            height: 50px;
-            padding: 15px 40px;
-            font-size: 13px
-    
-        }
-    }
-    .title {
-        font-size: 30px;
-    }
-}
-@media (max-width: 575px){
-    .button {
-        padding: 24px 102px;
-        background: $main-color;
-        font-size: 18px;
-        display: block;
-        margin: 0 auto;
-        &__mini {
-            font-weight: 500;
-            font-size: 20px;
-            padding: 15px 51px;
-            border-radius: 5px;
-        }
-        &__left {
-            text-align: left;
-        }
-        &__form {
-            height: 50px;
-            padding: 15px 40px;
-            font-size: 13px
-    
-        }
-    }
-    .title {
-        font-size: 30px;
-    }
-}
-
-
