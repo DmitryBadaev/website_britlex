@@ -10,6 +10,9 @@ body {
     max-width: 1370px;
     padding: 0 15px;
     margin: 0 auto;
+    @media (max-width: 400px) {
+        padding: 0 5px;
+    }
 }
 .lock {
     overflow: hidden;
@@ -34,6 +37,7 @@ h1,h2,h3,h4,h5 {
     font-style: normal;
     font-weight: 400;
     font-size: 36px;
+    // z-index: 10;
     color: $text-color;
     span {
         color: $text-desrc;

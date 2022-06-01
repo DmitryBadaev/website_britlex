@@ -1,0 +1,248 @@
+.pricing {
+
+    &__title {
+        margin-top: 30px;
+        font-weight: 600;
+        font-size: 48px;
+        text-align: center;
+    }
+    &__wrapper {
+        margin-top: 57px;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.pricing-item {
+    // max-width: 426px;
+    width: 30.72%;
+
+    min-height: 583px;
+    position: relative;
+
+    &__img {
+        margin: 0 auto;
+        width: 95.8%;
+        max-height: 340px;
+        img {
+            width: 100%;
+        }
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 30px;
+        color: $text-color;
+        text-align: center;
+    }
+
+    &__descr {
+        margin-top: 10px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: $text-desrc;
+        text-align: center;
+    }
+    &__price {
+        width: 240px;
+        height: 45px;
+        background: #EEEEEE;
+        border-radius: 5px;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 400;
+        font-size: 30px;
+        color: $main-color;
+        span {
+            margin-left: 8px;
+            font-weight: 400;
+            font-size: 18px;
+        }
+    }
+
+}
+@media (max-width: 992px) {
+    .pricing {
+
+        &__title {
+            font-size: 36px;
+        }
+    }
+    
+    .pricing-item {
+        min-height: 438px;
+    
+        &__img {
+            margin: 0 auto;
+            width: 95.8%;
+            max-height: 340px;
+            img {
+                width: 100%;
+            }
+        }
+    
+        &__title {
+            font-size: 22px;
+        }
+    
+        &__descr {
+            font-size: 16px;
+            line-height: 24px;
+        }
+        &__price {
+            width: 205px;
+            height: 45px;
+            font-size: 24px;
+            span {
+                margin-left: 5px;
+                font-size: 16px;
+            }
+        }
+    
+    }
+}
+@media (max-width: 767px) {
+    .pricing {
+        &__title {
+            font-size: 30px;
+        }
+    }
+    
+    .pricing-item {
+        min-height: 447px;
+    
+        &__img {
+            margin: 0 auto;
+            width: 95.8%;
+            max-height: 340px;
+            img {
+                width: 100%;
+            }
+        }
+    
+        &__title {
+            font-size: 20px;
+        }
+    
+        &__descr {
+            margin-top: 14px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &__price {
+            width: 190px;
+            height: 45px;
+            font-size: 22px;
+
+            span {
+                margin-left: 10px;
+                font-size: 16px;
+            }
+        }
+    
+    }
+}
+@media (max-width: 580px) {
+    .pricing {
+        padding-bottom: 50px;
+        &__title {
+            font-size: 30px;
+        }
+        &__wrapper {
+            margin-top: 0;
+            flex-direction: column;
+        }
+    }
+
+    
+    .pricing-item {
+        margin-top: 54px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 400px;
+        width: 79.1%;
+        &__img {
+            margin: 0 auto;
+            width: 79.1%;
+            img {
+                width: 100%;
+            }
+        }
+    
+        &__title {
+            font-size: 20px;
+        }
+    
+        &__descr {
+            margin-top: 14px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+        &__price {
+            width: 190px;
+            height: 45px;
+            font-size: 22px;
+
+            span {
+                margin-left: 10px;
+                font-size: 16px;
+            }
+        }
+    
+    }
+}
+@media (max-width: 350px) {
+    .pricing {
+        padding-bottom: 50px;
+        &__title {
+            font-size: 24px;
+        }
+        &__wrapper {
+            margin-top: 0;
+            flex-direction: column;
+        }
+    }
+
+    
+    .pricing-item {
+        margin-top: 54px;
+        margin-left: auto;
+        margin-right: auto;
+        min-height: 380px;
+        width: 100%;
+        &__img {
+            margin: 0 auto;
+            width: 79.1%;
+            img {
+                width: 100%;
+            }
+        }
+    
+        &__title {
+            font-size: 18px;
+        }
+    
+        &__descr {
+            margin-top: 14px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+        &__price {
+            width: 170px;
+            height: 37px;
+            font-size: 18px;
+
+            span {
+                margin-left: 5px;
+                font-size: 14px;
+            }
+        }
+    
+    }
+}

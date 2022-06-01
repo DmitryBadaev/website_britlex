@@ -1,5 +1,6 @@
 .header {
     padding: 57px 0 103px 0;
+    position: relative;
     &__burger {
         display: none;
         width: 30px;
@@ -84,9 +85,58 @@
 
     &__img {
         width: 49%;
+        position: relative;
         img {
             width: 100%;
         }
+        &-decor1 {
+            width: 18%;
+            position: absolute;
+            top: 17%;
+            left: 19%;;
+            animation: anim  2s infinite ease-in-out;
+            animation-delay: 0.5s;
+            img {
+                width: 100%;
+                
+            }
+        }
+        &-decor2 {
+            width: 19.76%;
+            position: absolute;
+            top: 20%;
+            left: 64%;
+            animation: anim  2s infinite ease-in-out;
+            animation-delay: 1s;
+            img {
+                width: 100%;
+                
+            }
+        }
+        &-decor3 {
+            width: 17.76%;
+            position: absolute;
+            top: 43%;
+            left: 16%;
+            animation: anim  2s infinite ease-in-out;
+            animation-delay: 0.3s;
+            img {
+                width: 100%;
+                
+            }
+        }
+        &-decor4 {
+            width: 17.76%;
+            position: absolute;
+            top: 39%;
+            left: 68%;
+            animation: anim  2s infinite ease-in-out;
+            img {
+                width: 100%;
+                
+            }
+        }
+
     }
 }
 .menu {

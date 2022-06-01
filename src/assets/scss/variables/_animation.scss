@@ -2,42 +2,11 @@
     from {
         transform: scale(1);
       }
-      25% {
-        transform: scale(1.1);
-      }
       50% {
         transform: scale(1.2);
-      }
-      75% {
-        transform: scale(1.1);
       }
     
       to {
         transform: scale(1);
       }
-}
-@keyframes logo-anim {
-    from {
-        transform: rotate(0);
-    }
-    33% {
-        transform: rotate(5deg);
-    }
-    66% {
-        transform: rotate(-5deg);
-    }
-    to {
-        transform: rotate(0);
-    }
-}
-
-@keyframes wif {
-    from {
-        transform: translateX(-300%);
-
-    }
-    to {
-        transform: translateX(0);
-
-    }
 }

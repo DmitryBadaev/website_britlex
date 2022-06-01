@@ -1,0 +1,214 @@
+.about-us {
+    padding: 100px 0 50px 0;
+    position: relative;
+
+    &__wrapper {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__content {
+        width: 50%;
+
+    }
+
+    &__title {
+        font-weight: 600;
+        font-size: 48px;
+        color: $text-color;
+
+    }
+    &__descr {
+        margin-top: 23px;
+        font-weight: 400;
+        font-size: 20px;
+        line-height: 30px;
+        color: $text-desrc;
+    }
+
+    &__amount {
+        margin-top: 51px;
+        display: flex;
+        max-width: 100%;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 33%;
+    }
+
+    &__number {
+        font-size: 48px;
+        font-weight: 600;
+        color: $main-color;
+    }
+    &__designation {
+        margin-top: 17px;
+        font-weight: 400;
+        font-size: 18px;
+        color: $main-color;
+        text-align: center;
+    }
+
+    &__img {
+        width: 37.59%;
+        img {
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .about-us {
+        &__content {
+            // max-width: 529px;
+            max-width: 56.33%;
+        }
+    
+        &__title {
+            font-weight: 600;
+            font-size: 36px;
+    
+        }
+        &__descr {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 24px;
+        }
+    
+        &__amount {
+            margin-top: 44px;
+            margin-top: 51px;
+            max-width: 100%;
+        }
+    
+        &__number {
+            font-size: 30px;
+        }
+        &__designation {
+            font-size: 16px;
+        }
+    
+        &__img {
+            width: 37.59%;
+        }
+    }
+
+}
+@media (max-width: 767px){
+    .about-us {
+        padding-top: 0;
+        &__content {
+            max-width: 46.52%;
+        }
+    
+        &__title {
+            font-size: 30px;
+    
+        }
+        &__descr {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 21px;
+        }
+    
+        &__amount {
+            margin-top: 37px;
+        }
+    
+        &__number {
+            font-size: 22px;
+        }
+        &__designation {
+            margin-top: 7px;
+            font-size: 13px;
+        }
+        &__img {
+            width: 42.75%;
+        }
+    }
+
+}
+@media (max-width: 575px){
+    .about-us {
+        &__wrapper {
+            flex-direction: column-reverse;
+            position: relative;
+        }
+        &__content {
+            max-width: 100%;
+            width: 100%;
+        }
+        &__title {
+            font-size: 30px;
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+    
+        }
+        &__descr {
+            margin-top: 10px;
+            font-size: 14px;
+            line-height: 21px;
+            text-align: center;
+        }
+    
+        &__amount {
+            margin-top: 37px;
+            align-items: center;
+        }
+    
+        &__number {
+            font-size: 22px;
+        }
+        &__designation {
+            margin-top: 7px;
+            font-size: 13px;
+        }
+        &__img {
+            margin-top: 60px;
+            width: 100%;
+        }
+    }
+
+}
+@media (max-width: 320px){
+    .about-us {
+        &__title {
+            font-size: 24px;
+        }
+        &__descr {
+            margin-top: 10px;
+            font-size: 13px;
+            line-height: 20px;
+        }
+    
+        &__amount {
+            margin-top: 37px;
+            align-items: center;
+            flex-direction: column;
+        }
+        &__item {
+            margin-bottom: 20px;
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+        &__number {
+            font-size: 24px;
+        }
+        &__designation {
+            margin-top: 7px;
+            font-size: 15px;
+        }
+        &__img {
+            margin-top: 30px;
+            width: 100%;
+        }
+    }
+}
