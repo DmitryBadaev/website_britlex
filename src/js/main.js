@@ -1,8 +1,7 @@
-import tabs from './modules/tabs';
-
-import services from './services/services';
+import burger from './modules/burger';
 
 window.addEventListener('DOMContentLoaded', () => {
+    burger();
     
 });
 

@@ -2,93 +2,47 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./src/js/modules/tabs.js":
-/*!********************************!*\
-  !*** ./src/js/modules/tabs.js ***!
-  \********************************/
+/***/ "./src/js/modules/burger.js":
+/*!**********************************!*\
+  !*** ./src/js/modules/burger.js ***!
+  \**********************************/
 /***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
 
 __webpack_require__.r(__webpack_exports__);
-function tabs(tabsSelector, tabsContentSelector, tabsParentSelector, activeClass) {
+function burger() {
   "use strict";
 
-  const tabs = document.querySelectorAll(tabsSelector),
-        tabsContent = document.querySelectorAll(tabsContentSelector),
-        tabsParent = document.querySelector(tabsParentSelector);
+  const btnMenu = document.querySelector('.header__burger'),
+        btnClose = document.querySelector('.header__close'),
+        body = document.querySelector('body'),
+        menu = document.querySelector('.menu'),
+        menuLink = document.querySelectorAll('.menu__link');
 
-  function hideTabContent() {
-    tabsContent.forEach(item => {
-      item.classList.add('hide');
-      item.classList.remove('show', 'fade');
-    });
-    tabs.forEach(item => {
-      item.classList.remove(activeClass);
-    });
+  function closeMenu() {
+    menu.classList.remove('active');
+    body.classList.remove('lock');
   }
 
-  function showTabContent() {
-    let i = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 0;
-    tabsContent[i].classList.add('show', 'fade');
-    tabsContent[i].classList.remove('hide');
-    tabs[i].classList.add('tabheader__item_active');
-  }
-
-  hideTabContent();
-  showTabContent();
-  tabsParent.addEventListener('click', event => {
-    const target = event.target;
-
-    if (target && target.classList.contains(tabsSelector.slice(1))) {
-      tabs.forEach((item, i) => {
-        if (target == item) {
-          hideTabContent();
-          showTabContent(i);
-        }
-      });
+  btnMenu.addEventListener('click', () => {
+    menu.classList.add('active');
+    body.classList.add('lock');
+  });
+  menuLink.forEach(item => {
+    item.addEventListener('click', () => {
+      closeMenu();
+    });
+  });
+  menu.addEventListener('click', e => {
+    if (e.target.classList.contains('menu')) {
+      closeMenu();
     }
   });
-}
-
-/* harmony default export */ __webpack_exports__["default"] = (tabs);
-
-/***/ }),
-
-/***/ "./src/js/services/services.js":
-/*!*************************************!*\
-  !*** ./src/js/services/services.js ***!
-  \*************************************/
-/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
-
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "getResource": function() { return /* binding */ getResource; },
-/* harmony export */   "postData": function() { return /* binding */ postData; }
-/* harmony export */ });
-
-
-const postData = async (url, data) => {
-  const res = await fetch(url, {
-    method: "POST",
-    headers: {
-      'Content-type': 'application/json'
-    },
-    body: data
+  btnClose.addEventListener('click', () => {
+    closeMenu();
   });
-  return await res.json();
-};
-
-async function getResource(url) {
-  let res = await fetch(url);
-
-  if (!res.ok) {
-    throw new Error(`Could not fetch ${url}, status: ${res.status}`);
-  }
-
-  return await res.json();
 }
 
-
-
+/* harmony default export */ __webpack_exports__["default"] = (burger);
 
 /***/ })
 
@@ -119,23 +73,6 @@ async function getResource(url) {
 /******/ 	}
 /******/ 	
 /************************************************************************/
-/******/ 	/* webpack/runtime/define property getters */
-/******/ 	!function() {
-/******/ 		// define getter functions for harmony exports
-/******/ 		__webpack_require__.d = function(exports, definition) {
-/******/ 			for(var key in definition) {
-/******/ 				if(__webpack_require__.o(definition, key) && !__webpack_require__.o(exports, key)) {
-/******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
-/******/ 				}
-/******/ 			}
-/******/ 		};
-/******/ 	}();
-/******/ 	
-/******/ 	/* webpack/runtime/hasOwnProperty shorthand */
-/******/ 	!function() {
-/******/ 		__webpack_require__.o = function(obj, prop) { return Object.prototype.hasOwnProperty.call(obj, prop); }
-/******/ 	}();
-/******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	!function() {
 /******/ 		// define __esModule on exports
@@ -155,11 +92,11 @@ var __webpack_exports__ = {};
   !*** ./src/js/main.js ***!
   \************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _modules_tabs__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/tabs */ "./src/js/modules/tabs.js");
-/* harmony import */ var _services_services__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./services/services */ "./src/js/services/services.js");
+/* harmony import */ var _modules_burger__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./modules/burger */ "./src/js/modules/burger.js");
 
-
-window.addEventListener('DOMContentLoaded', () => {});
+window.addEventListener('DOMContentLoaded', () => {
+  (0,_modules_burger__WEBPACK_IMPORTED_MODULE_0__["default"])();
+});
 }();
 /******/ })()
 ;

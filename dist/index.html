@@ -14,27 +14,27 @@
 <body>
     <header id="up" class="header">
         <div class="container">
-            <div class="header__menu ">
+            <div class="header__menu">
                 <div class="logo">Brit<span>lex</span></div>
                 <div class="menu">
-                    <div class="menu__wrapper">
+                    <div class="menu__wrapper ">
                         <div class="logo logo__menu">Brit<span>lex</span></div>
                         <hr class="header__hr">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Home</a>
+                                <a href="#up" class="menu__link">Home</a>
                             </li>
                             <li class="menu__item">
                                 <a href="#" class="menu__link">Skills</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">About Us</a>
+                                <a href="#about-us" class="menu__link">About Us</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Pricing</a>
+                                <a href="#pricing" class="menu__link">Pricing</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Contacts</a>
+                                <a href="#contact-us" class="menu__link">Contacts</a>
                             </li>
                         </ul>
                         <button class="menu__button">Let's Talk</button>
@@ -42,8 +42,8 @@
                             <span></span>
                         </div>
                     </div>
+                    
                 </div>
-                
             </div>
             <div class="header__burger">
                 <span></span>
@@ -72,7 +72,59 @@
             </div>
         </div>
     </header>
-    <section class="about-us">
+    <section class="skills">
+        <div class="container">
+            <h2 class="skills__title">Skills</h2>
+            <div class="skills__wrapper">
+                <div class="skills-block skills-block__1">
+                    <div class="skills-block__image skills-block__image__1">
+                        <img src="assets/img/skills/1.png" alt="Speaking">
+                    </div>
+                    <h4 class="skills-block__title">Speaking</h4>
+                    <p class="skills-block__descr">Improve your English skills and confidence. 
+                        Live classes and interactive lessons online. 
+                        20% extra free for a limited time only
+                        
+                        Learn English online and improve your 
+                        skills through our high-quality courses
+                        and resources – all designed for adult language learners.</p>
+                    <a href="#" class="skills-block__link">Learn more</a>
+                </div>
+                <div class="skills-block skills-block__2">
+                    <div class="skills-block__image skills-block__image__2">
+                        <img src="assets/img/skills/2.png" alt="Writing">
+                    </div>
+                    <h4 class="skills-block__title">Writing</h4>
+                    <p class="skills-block__descr">One of the most important and extensive 
+                        areas of natural science, the science that 
+                        studies substances, also their composition </p>
+                    <a href="#" class="skills-block__link">Learn more</a>
+                </div>
+                <div class="skills-block skills-block__3">
+                    <div class="skills-block__image skills-block__image__3">
+                        <img src="assets/img/skills/3.png" alt="Reading">
+                    </div>
+                    <h4 class="skills-block__title">Reading</h4>
+                    <p class="skills-block__descr">perception and response actions of the user
+                        resulting from the use and/or upcoming use 
+                        of the product, system or service</p>
+                    <a href="#" class="skills-block__link">Learn more</a>
+                </div>
+                <div class="skills-block skills-block__4">
+                    <div class="skills-block__image skills-block__image__4">
+                        <img src="assets/img/skills/4.png" alt="Listening">
+                    </div>
+                    <h4 class="skills-block__title">Listening</h4>
+                    <p class="skills-block__descr">Here you can find activities to practise
+                        your listening skills. Listening will help you
+                        to improve your understanding </p>
+                    <a href="#" class="skills-block__link">Learn more</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+    <section id="about-us" class="about-us">
         <div class="container">
             <div class="about-us__wrapper">
                 <div class="about-us__content">
@@ -106,8 +158,7 @@
             </div>
         </div>
     </section>
-
-    <section class="pricing">
+    <section id="pricing" class="pricing">
         <div class="container">
             <h3 class="pricing__title">Pricing</h3>
             <div class="pricing__wrapper">
@@ -148,8 +199,7 @@
             </div>
         </div>
     </section>
-
-    <section class="contact-us">
+    <section id="contact-us" class="contact-us">
         <div class="container">
             <div class="contact-us__wrapper">
                 <div class="contact-us__img">
@@ -158,7 +208,7 @@
                 <div class="contact-us__content">
                     <h3 class="contact-us__title">Contact Us</h3>
                     <p class="contact-us__descr">Discover your current English level by taking our free online English test.Sign up to our newsletter for learning tips and free resources</p>
-                    <form action="contact-us__form" class="contact-us__form">
+                    <form id="form" action="contact-us__form" class="contact-us__form">
                         <input placeholder="Enter Your E-mail" type="email" name="email" id="contact__email">
                         <button>Subscribe</button>
                     </form>
@@ -166,7 +216,7 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
+    <footer id="footer" class="footer">
         <div class="container">
             <hr>
             <div class="footer__wrapper">
@@ -179,7 +229,6 @@
             </div>
         </div>
     </footer>
-
     <script src="js/script.js"></script>
 </body>
 </html>
